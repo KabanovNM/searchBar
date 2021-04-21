@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.01em;
+
+}
+
+.container {
+  max-width: 1469px;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+
+table {
+  max-width: 1469px;
+  width: 100%;
+  margin: 15px auto 0;
+  border-collapse: collapse;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  thead {
+
+    tr {
+      height: 48px;
+
+      th {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 19px;
+        text-align: left;
+        color: #334D6E;
+        opacity: 0.5;
+        box-sizing: border-box;
+        padding: 0 24px 0 0;
+
+        &:first-child {
+          padding-left: 24px;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1px solid #EBEFF2;
+
+      td {
+        height: 64px;
+        text-align: left;
+        font-size: 13px;
+        line-height: 19px;
+        color: #707683;
+        padding: 0 24px 0 0;
+        box-sizing: border-box;
+
+        &:first-child {
+          padding-left: 24px;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+
+        .flex {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+
+        .avatar {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          margin-right: 14px;
+        }
+
+        .name {
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: 500;
+          color: #323C47;
+        }
+      }
+    }
+  }
+}
+

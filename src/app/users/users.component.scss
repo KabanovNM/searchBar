@@ -1,0 +1,35 @@
+.search {
+  max-width: 1184px;
+  margin-top: 118px;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: url('../../assets/images/search.svg') center no-repeat;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 38px;
+    top: 22px;
+  }
+
+  input {
+    height: 60px;
+    padding: 21px 21px 21px 68px;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 18px;
+      color: #90A0B7;
+
+    }
+
+    &:focus-visible {
+      outline: none;
+
+    }
+  }
+}

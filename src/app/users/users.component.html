@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="search">
+    <input type="text" placeholder="Поиск пользователя Github" [(ngModel)]="search">
+  </div>
+
+  <table>
+    <thead>
+    <tr>
+      <th width="40">№</th>
+      <th>Имя</th>
+      <th width="210">Email</th>
+      <th width="120">Имя компании</th>
+      <th width="120">Роль</th>
+      <th width="263">Активность</th>
+      <th width="154">Дата регистрации</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of usersService.users | search:search; let i = index;">
+      <td width="40">{{i + 1}}.</td>
+      <td>
+        <a [routerLink]="['user', user.login]" class="flex">
+          <img [src]="user.avatar_url" class="avatar" alt="">
+          <span class="name">{{user.name}}</span>
+        </a>
+      </td>
+      <td width="210">{{user.email}}</td>
+      <td width="120">{{user.company}}</td>
+      <td width="120">Разработчик</td>
+      <td width="263">80%</td>
+      <td width="154">{{user.created_at | date}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,68 @@
+.back {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #192A3E;
+  text-decoration: none;
+  position: relative;
+  margin: 48px 0 0 168px;
+  display: block;
+
+  &:before {
+    content: '';
+    background: url('../../assets/images/arrovLeft.svg') center no-repeat;
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    top: 4.8px;
+    left: -10px;
+  }
+}
+
+.user {
+  display: flex;
+  max-width: 1108px;
+  width: 100%;
+  margin: 38px auto;
+
+  .user__avatar {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    margin-right: 68px;
+  }
+
+  .user__info {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .user__info-item {
+      max-width: 435px;
+      width: 100%;
+
+      .user__info-label {
+        font-size: 11px;
+        line-height: 16px;
+        color: #818E9B;
+      }
+
+      .user__info-value {
+        font-size: 13px;
+        line-height: 19px;
+        color: #323C47;
+      }
+    }
+  }
+}
+
+.label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #192A3E;
+  margin: 122px 0 0;
+
+}
+
+

@@ -1,0 +1,46 @@
+<div class="container">
+  <a class="back" [routerLink]="['']">Вернуться назад</a>
+  <div class="user" *ngIf="user">
+    <img [src]="user.avatar_url" alt="user" class="user__avatar">
+    <div class="user__info">
+      <div class="user__info-item">
+        <p class="user__info-label">Имя</p>
+        <p class="user__info-value">{{user.name}}</p>
+      </div>
+      <div class="user__info-item">
+        <p class="user__info-label">Никнейм</p>
+        <p class="user__info-value">{{user.login}}</p>
+      </div>
+      <div class="user__info-item">
+        <p class="user__info-label">Активность</p>
+        <p class="user__info-value">60%</p>
+      </div>
+    </div>
+  </div>
+  <h3 class="label">Список проектов</h3>
+  <table>
+    <thead>
+    <tr>
+      <th width="40">№</th>
+      <th width="700">Название</th>
+      <th width="120">Имя компании</th>
+      <th width="120">Автор</th>
+      <th width="263">Активность</th>
+      <th width="154">Последний коммит</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let project of projects; let i = index">
+      <td width="40">{{i + 1}}.</td>
+      <td>
+          <span class="name">{{project.name}}</span>
+      </td>
+      <td width="120">freelance</td>
+      <td width="120">{{project.owner.login}}</td>
+      <td width="263">80%</td>
+      <td width="154">{{project.pushed_at | date}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
